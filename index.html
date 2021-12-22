@@ -1,28 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Vue Mastery</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <title>Spleet.cash</title>
+    <link rel="icon" href="favicon.ico">
+
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3.2.26/dist/vue.global.js"></script>
+    <!-- <script src="https://unpkg.com/vue@next"></script> -->
+    <!-- <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script> -->
   </head>
   <body>
     <div id="app">
-      <div class="nav-bar"></div>
+      <div class="home">
+        <div class="landing-section">
+          <header class="header">
+            <div class="logo">
+              <img src="assets/images/spleet-logo-full-white.png" alt="">
+            </div>
+            <div class="menu">
+              <button class="btn btn-beans btn-primary">Reserve</button>
+            </div>
+          </header>
 
-      <div class="cart">Cart({{ cart.length }})</div>
-      <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
+          <div class="intro">
+            <p class="title white-text">
+              Join Forces with your Friends,<br> Spleet Payments 💸
+            </p>
+            <p class="sub grey-text">
+              Say bye-bye to telepathically reminding your friends about their split of payments.
+            </p>
+          </div>
+          <div class="intro-img">
+            <img class="max-vp-img" src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/landing-phones.png" alt="">
+            <img class="mini-vp-img" src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/mobile-landing-img.png" alt="">
+            <img class="mini-vp-img" src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/mobile-landing-img-2.png" alt="">
+          </div>
+
+          <div class="call-out">
+            <p>
+              Finally, you can retire awkward <br />
+              conversations with your friends about <br />
+              settling their cut of payments. 😮‍💨
+            </p>
+          </div>
+        </div>
+     
+        <div class="web-section">
+          <section class="spleet-steps">
+            <div class="horizontal-section ">
+                <div class="sticky-wrapper">
+                <div class="element-wrapper">
+                  <div class="element zero">
+                    <p class="tiny">How does it work?</p>
+                    <p class="title">Spleet Cash in <br /> 4 simple steps</p>
+                  </div>
+    
+                  <div class="element one">
+                    <div class="info">
+                      <p class="counter">
+                        <span class="no">1</span>
+                      </p>
+                      <p class="title">Input the total 🔢</p>
+                      <p class="sub">
+                        Your friends will know the total payment <br />
+                        to be split and what it’s for. 📝
+                      </p>
+                    </div>
+                    <div class="step-img">
+                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                    </div>
+                    <div class="nav">
+                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
+                    </div>
+                  </div>
+    
+                  <div class="element two">
+                    <div class="info">
+                      <p class="counter">
+                        <span class="no">2</span>
+                      </p>
+                      <p class="title">Who’s <br /> spleeting? 💭</p>
+                      <p class="sub">
+                        Let. Your. Calculator. Breathe 😩
+                      </p>
+                      <p class="sub">
+                        Invite your friends to accept their cut  <br />
+                        of the payment. Spleet Cash does the math.
+                      </p>
+                    </div>
+                    <div class="step-img">
+                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                    </div>
+                    <div class="nav">
+                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
+                    </div>
+                  </div>
+                  <div class="element three">
+                    <div class="info">
+                      <p class="counter">
+                        <span class="no">3</span>
+                      </p>
+                      <p class="title">Who’s <br /> spleeting? 💭</p>
+                      <p class="sub">
+                        Once your friends have agreed to their  <br />
+                        cuts, make the payment. 🤝
+                      </p>
+                    </div>
+                    <div class="step-img">
+                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                    </div>
+                    <div class="nav">
+                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
+                    </div>
+                  </div>
+                  <div class="element four">
+                    <div class="info">
+                      <p class="counter">
+                        <span class="no">4</span>
+                      </p>
+                      <p class="title">Full Circle ⭕️</p>
+                      <p class="sub">
+                        After you pay, you’ll have the option to  <br />
+                        save your friends into a Circle.
+                      </p>
+                      <p class="sub">
+                        Circles are useful for recurring payments  <br />
+                        with the same friends. 🔁
+                      </p>
+                    </div>
+                    <div class="step-img">
+                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </section>
+        </div>
+        
+        
+        <div class="mobile-section">
+          <section class="spleet-steps">
+            <div class="steps-wrapper">
+              <div class="element zero">
+                <p class="tiny">How does it work?</p>
+                <p class="title">Spleet Cash in <br /> 4 simple steps</p>
+              </div>
+
+              <div class="element one">
+                <div class="info">
+                  <p class="counter">
+                    <span class="no">1</span>
+                    <span class="title">Input the total 🔢</span>
+                  </p>
+                  <p class="sub">
+                    Your friends will know the total payment <br />
+                    to be split and what it’s for. 📝
+                  </p>
+                </div>
+                <div class="step-img">
+                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                </div>
+                <div class="nav">
+                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
+                </div>
+              </div>
+
+              <div class="element two">
+                <div class="info">
+                  <p class="counter">
+                    <span class="no">2</span>
+                    <span class="title">Who’s spleeting? 💭</span>
+                  </p>
+                  <p class="sub">
+                    Let. Your. Calculator. Breathe 😩
+                  </p>
+                  <p class="sub">
+                    Invite your friends to accept their cut  <br />
+                    of the payment. Spleet Cash does the math.
+                  </p>
+                </div>
+                <div class="step-img">
+                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                </div>
+                <div class="nav">
+                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
+                </div>
+              </div>
+              <div class="element three">
+                <div class="info">
+                  <p class="counter">
+                    <span class="no">3</span>
+                    <span class="title">Pay 💸</span>
+                  </p>
+                  <p class="sub">
+                    Once your friends have agreed to their  <br />
+                    cuts, make the payment. 🤝
+                  </p>
+                </div>
+                <div class="step-img">
+                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                </div>
+                <div class="nav">
+                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
+                </div>
+              </div>
+              <div class="element four">
+                <div class="info">
+                  <p class="counter">
+                    <span class="no">4</span>
+                    <span class="title">Full Circle ⭕️</span>
+                  </p>
+                  <p class="sub">
+                    Circles are useful for recurring spleets with the same friends. 🔁
+                  </p>
+                  <p class="sub">
+                    Save the hassle.
+                  </p>
+                </div>
+                <div class="step-img">
+                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+
+
+        <section class="reserve-spleet-tag">
+          <div class="reserve-form-wrapper">
+            <div class="reserve-form">
+              <p class="sub">What are you waiting for?</p>
+              <p class="title">Reserve your username 🐒</p>
+  
+              <div class="app-form">
+                <reservation-form></reservation-form>
+              </div>
+            </div>
+  
+            <div class="reserve-img">
+              <!-- <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt=""> -->
+              <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/reserve-img.png" alt="">
+            </div>
+          </div>
+          
+        </section>
+
+        <footer>
+          <div class="contact">
+            <p class="sub">
+              * Usernames are valid for 3 months from reservation. <br />
+              After that period, the username will be released.
+            </p>
+
+            <p class="mid-text max-vp-img">hello@spleet.cash</p>
+
+            <a href="#" class="footer-logo max-vp-img">
+              <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/footer-logo.png" alt="">
+            </a>
+          </div>
+
+          <div class="download">
+            <p class="title">Coming to the App Store</p>
+            <a href="#">
+            <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/app-store.png" alt="">
+            </a> 
+            <p class="tiny max-vp-img">© 2021 Spleet Cash Ltd. All rights reserved</p>           
+          </div>
+          <div class="socials">
+            <p class="title">Follow Spleet Cash</p>
+
+            <div class="follow-us">
+              <a href="#">
+                <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/twitter.png" alt="">
+              </a>
+              <a href="#">
+                <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/instagram.png" alt="">
+              </a>
+            </div>
+
+            <div class="links max-vp-img">
+              <a href="#" class="tiny">Terms</a>
+              <a href="#" class="tiny">Privacy</a>
+            </div>
+
+
+            <p class="mid-text mini-vp-img">hello@spleet.cash</p>
+
+            <a href="#" class="footer-logo mini-vp-img">
+              <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/footer-logo.png" alt="">
+            </a>
+
+            <div class="links mini-vp-img">
+              <a href="#" class="tiny">Terms</a>
+              <a href="#" class="tiny">Privacy Policy</a>
+            </div>
+
+            <p class="mini-vp-img tiny">© 2021 Spleet Cash Ltd. All rights reserved</p>           
+
+          
+
+          </div>
+        </footer>
+      </div>
     </div>
+    
+
+    <script>
+
+      var windowWidth = window.innerWidth;
+      var horizontalLength = document.querySelector(".element-wrapper").scrollWidth;
+      var distFromTop = document.querySelector(".horizontal-section").offsetTop;
+
+      document.querySelector(".horizontal-section").style.height = horizontalLength + "px";
+      var scrollDistance = distFromTop + horizontalLength - windowWidth 
+      console.log(scrollDistance);
+
+      window.onscroll = function(){
+        var scrollTop = window.pageYOffset
+        if (scrollTop >= distFromTop && scrollTop <= scrollDistance){
+          document.querySelector(".element-wrapper").style.transform = "translateX(-" +(scrollTop - distFromTop) +"px"
+        }
+      }
+    </script>
 
     <!-- Import App -->
     <script src="./main.js"></script>
 
     <!-- Import Components -->
-    <script src="./components/ProductDisplay.js"></script>
-    <script src="./components/ReviewForm.js"></script>
-    <script src="./components/ReviewList.js"></script>
+    <script src="./components/ReservationForm.js"></script>
+
+
 
     <!-- Mount App -->
     <script>
