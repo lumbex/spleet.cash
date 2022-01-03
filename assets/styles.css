@@ -143,8 +143,8 @@ p{
 
 .btn-cool{
   border: 1px solid #FF8585;
-  background-color: #FF8585;
-  color: #ffffff;
+  background-color: #FF8585 !important;
+  color: #ffffff !important;
 }
 .btn-cool::after{
   background-color: #ffffff;
@@ -156,6 +156,16 @@ p{
 }
 .btn .btn-loader {
     height: 26px;
+}
+#b {
+  background-color: #FF8585
+}
+.errr{
+    border-bottom: 1px dotted;
+    border-image: linear-gradient(90deg, #FF4D4D 1.25%, #FF4E4D 7.75%, #FF514C 14.25%, #FF574A 20.75%, #FE6048 27.25%, #FE6A44 33.75%, #FD7741 40.25%, #FC853D 46.75%, #FC9338 53.25%, #FBA134 59.75%, #FAAE31 66.25%, #FAB82D 72.75%, #F9C12B 79.25%, #F9C729 85.75%, #F9CA28 92.25%, #F9CB28 98.75%);
+    border-image-slice: 1;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 /* Btn End */
 
@@ -232,7 +242,7 @@ p{
     line-height: 48px;
     font-weight: 800;
     text-align: center;
-    margin: 4vh 0 16vh;
+    margin: 10vh 0 18vh;
 }
 .landing-section .call-out p{
     margin: 0;
@@ -244,7 +254,7 @@ p{
   display: flex;
 }
 .mini-vp-img{
-  display: none;
+  display: none !important;
 }
 .web-section{
   display: flex;
@@ -260,7 +270,7 @@ p{
 
 .sticky-wrapper {
   position: sticky;
-  top: 100px;
+  top: 6vh;
   width: 100%;
   overflow: hidden;
 }
@@ -271,7 +281,7 @@ p{
 }
 
 .element {
-  width: 650px;
+  width: 700px;
   height: 500px;
   background-color: transparent;
   margin: 0 20px 0 0;
@@ -295,6 +305,7 @@ p{
 }
 .spleet-steps .three{
     display: flex;
+    width: 530px;
 }
 .spleet-steps .four{
     display: flex;
@@ -311,7 +322,7 @@ p{
 }
 .spleet-steps .step-img{}
 .spleet-steps .step-img img{
-    width: 205px;
+    width: 250px;
     height: auto;
 }
 .spleet-steps .nav{}
@@ -366,6 +377,12 @@ p{
     margin-bottom: 10px;
     text-transform: capitalize;
 }
+.app-form-success{
+    color: #32D74B;
+    text-align: left;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
 .reserve-spleet-tag .form-group{
     display: flex;
     flex-direction: column;
@@ -385,7 +402,7 @@ p{
     padding: 2px 0 10px;
     border: 1px solid transparent !important;
     border-radius: 4px;
-    color: #9F9FA5;
+    color: #e1e1e1;
     font-size: 16px;
     box-shadow: 0 0 0 transparent!important;
 }
@@ -423,6 +440,67 @@ p{
 
 
 /* ReserveUsername End*/
+
+/* AppModal*/
+.app-modal {
+}
+.app-modal .modal-wrapper{
+  background-color: #1C1C1E;
+  color: #ffffff;
+  position: relative;
+  max-width: 450px;
+}
+.app-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C1C1E;
+  padding: 0;
+}
+.app-modal .modal-title{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    margin: 20px 0 16px;
+}
+.app-modal .modal-text{
+    font-size: 16px;
+    padding: 0 4%;
+    line-height: 20px;
+}
+.app-modal .modal-action{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #2C2C2E;
+    margin-top: 20px;
+    display: flex;
+    padding: 14px 0;
+}
+.app-modal .modal-action a{
+    background-color: #FF8585;
+    border-radius: 40px;
+    padding: 6px 20px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    display: inline-block;
+}
+.app-modal .modal-action a:hover{}
+.app-modal .modal-close{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+}
+.app-modal .modal-close:hover{}
+.app-modal .modal-close img{
+    height: 28px;
+    width: auto;
+}
+/* AppModal End*/
 
 /* Footer*/
 footer {
@@ -526,6 +604,76 @@ footer .socials .tiny{}
 /* Footer End*/
 
 
+/* Privacy*/
+.privacy{
+  color: #ffffff;
+    margin: 0;
+  background: url(https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/landing-bg.png) no-repeat center center fixed;
+  background-color: #1C1C1E;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+}
+.privacy .header {}
+.page-wrapper {
+    padding: 0 4%;
+}
+.page-title {
+    font-weight: 800;
+}
+.app-card {
+    background-color: #2C2C2E;
+    border-radius: 10px;
+    padding: 6vh 2%;
+    margin-bottom: 16vh;
+}
+.app-card .wrapper{}
+
+.privacy h1 {
+    font-size: 40px;
+    line-height: 46px;
+}
+.privacy h2 {font-size: 18px;line-height: 22px;margin-top: 20px;margin-bottom: 4px;}
+.privacy h3 {}
+.privacy h4 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+.bold{
+  font-weight: bold;
+}
+
+.privacy .title{
+}
+.privacy .sub{
+    font-size: 14px;
+    line-height: 18px;
+}
+.privacy ol{
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 18px;
+}
+.privacy ol li{}
+.privacy ul{
+    margin: 0;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.privacy ul li{}
+/* Privacy End*/
+
+
 /* Media Queries */
 @media only screen and (max-width: 600px) {
   .header .logo img {
@@ -533,7 +681,7 @@ footer .socials .tiny{}
   }
   .btn {
     font-size: 12px;
-    padding: 0px 25px;
+    padding: 6px 30px;
   }
   .landing-section .intro .title {
     text-align: left;
@@ -690,7 +838,11 @@ footer .socials .tiny{}
     height: 50px;
     margin: 4vh 0;
   }
-
+  .privacy h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  
 }
 
 

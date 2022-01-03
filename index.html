@@ -8,32 +8,38 @@
     <title>Spleet.cash</title>
     <link rel="icon" href="favicon.ico">
 
+    <!-- Import Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
     <script src="https://unpkg.com/vue@3.2.26/dist/vue.global.js"></script>
-    <!-- <script src="https://unpkg.com/vue@next"></script> -->
-    <!-- <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script> -->
+    <!-- Import Twitter -->
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+
+     <!-- Twitter -->
+    <meta name="twitter:title" content="Spleet Cash">
+    <meta name="twitter:description" content="Split payments with your friends">
+    <meta name="twitter:image" content="assets/logo.png">
+    <meta property="twitter:url" content="https//spleet.cash">
+    <meta name="twitter:card" content="summary">
+    
   </head>
   <body>
+    <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+    
     <div id="app">
       <div class="home">
         <div class="landing-section">
-          <header class="header">
-            <div class="logo">
-              <img src="assets/images/spleet-logo-full-white.png" alt="">
-            </div>
-            <div class="menu">
-              <button class="btn btn-beans btn-primary">Reserve</button>
-            </div>
-          </header>
+          <app-header></app-header>
 
           <div class="intro">
             <p class="title white-text">
-              Join Forces with your Friends,<br> Spleet Payments 💸
+              Join Forces with your Friends,<br> <span class="errr">Spleet</span> Payments 💸
             </p>
             <p class="sub grey-text">
-              Say bye-bye to telepathically reminding your friends about their split of payments.
+              Spleet Cash helps you quickly split payments with your friends for everyday things.
             </p>
           </div>
           <div class="intro-img">
@@ -44,8 +50,8 @@
 
           <div class="call-out">
             <p>
-              Finally, you can retire awkward <br />
-              conversations with your friends about <br />
+              Retire awkward conversations<br />
+               with your friends about <br />
               settling their cut of payments. 😮‍💨
             </p>
           </div>
@@ -53,12 +59,12 @@
      
         <div class="web-section">
           <section class="spleet-steps">
-            <div class="horizontal-section ">
+            <div ref="horizontalSection" class="horizontal-section ">
                 <div class="sticky-wrapper">
-                <div class="element-wrapper">
+                <div ref="elementWrapper" class="element-wrapper">
                   <div class="element zero">
                     <p class="tiny">How does it work?</p>
-                    <p class="title">Spleet Cash in <br /> 4 simple steps</p>
+                    <p class="title">Spleet Cash in <br /> 3 simple steps</p>
                   </div>
     
                   <div class="element one">
@@ -73,7 +79,7 @@
                       </p>
                     </div>
                     <div class="step-img">
-                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/input-amount.png" alt="">
                     </div>
                     <div class="nav">
                       <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
@@ -95,49 +101,28 @@
                       </p>
                     </div>
                     <div class="step-img">
-                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/add-friends.png" alt="">
                     </div>
                     <div class="nav">
                       <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
                     </div>
                   </div>
+
                   <div class="element three">
                     <div class="info">
                       <p class="counter">
                         <span class="no">3</span>
                       </p>
-                      <p class="title">Who’s <br /> spleeting? 💭</p>
+                      <p class="title">Pay 💸</p>
                       <p class="sub">
-                        Once your friends have agreed to their  <br />
-                        cuts, make the payment. 🤝
+                        After your friends have agreed to their cuts, make the payment. 🤝
                       </p>
                     </div>
                     <div class="step-img">
-                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
-                    </div>
-                    <div class="nav">
-                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
+                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/spleet-payout.png" alt="">
                     </div>
                   </div>
-                  <div class="element four">
-                    <div class="info">
-                      <p class="counter">
-                        <span class="no">4</span>
-                      </p>
-                      <p class="title">Full Circle ⭕️</p>
-                      <p class="sub">
-                        After you pay, you’ll have the option to  <br />
-                        save your friends into a Circle.
-                      </p>
-                      <p class="sub">
-                        Circles are useful for recurring payments  <br />
-                        with the same friends. 🔁
-                      </p>
-                    </div>
-                    <div class="step-img">
-                      <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -151,7 +136,7 @@
             <div class="steps-wrapper">
               <div class="element zero">
                 <p class="tiny">How does it work?</p>
-                <p class="title">Spleet Cash in <br /> 4 simple steps</p>
+                <p class="title">Spleet Cash in <br /> 3 simple steps</p>
               </div>
 
               <div class="element one">
@@ -166,7 +151,7 @@
                   </p>
                 </div>
                 <div class="step-img">
-                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/input-amount.png" alt="">
                 </div>
                 <div class="nav">
                   <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
@@ -188,12 +173,13 @@
                   </p>
                 </div>
                 <div class="step-img">
-                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/add-friends.png" alt="">
                 </div>
                 <div class="nav">
                   <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
                 </div>
               </div>
+              
               <div class="element three">
                 <div class="info">
                   <p class="counter">
@@ -206,27 +192,10 @@
                   </p>
                 </div>
                 <div class="step-img">
-                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
+                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/spleet-payout.png" alt="">
                 </div>
                 <div class="nav">
                   <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/arrow.png" alt="">
-                </div>
-              </div>
-              <div class="element four">
-                <div class="info">
-                  <p class="counter">
-                    <span class="no">4</span>
-                    <span class="title">Full Circle ⭕️</span>
-                  </p>
-                  <p class="sub">
-                    Circles are useful for recurring spleets with the same friends. 🔁
-                  </p>
-                  <p class="sub">
-                    Save the hassle.
-                  </p>
-                </div>
-                <div class="step-img">
-                  <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/iPhone-mockup.png" alt="">
                 </div>
               </div>
             </div>
@@ -235,14 +204,14 @@
 
 
 
-        <section class="reserve-spleet-tag">
+        <section id="#reserve" class="reserve-spleet-tag">
           <div class="reserve-form-wrapper">
             <div class="reserve-form">
               <p class="sub">What are you waiting for?</p>
               <p class="title">Reserve your username 🐒</p>
-  
-              <div class="app-form">
-                <reservation-form></reservation-form>
+
+              <div class="app-form">     
+                <reservation-form @open-success-modal="openModal"></reservation-form>
               </div>
             </div>
   
@@ -253,95 +222,102 @@
           </div>
           
         </section>
-
-        <footer>
-          <div class="contact">
-            <p class="sub">
-              * Usernames are valid for 3 months from reservation. <br />
-              After that period, the username will be released.
-            </p>
-
-            <p class="mid-text max-vp-img">hello@spleet.cash</p>
-
-            <a href="#" class="footer-logo max-vp-img">
-              <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/footer-logo.png" alt="">
-            </a>
-          </div>
-
-          <div class="download">
-            <p class="title">Coming to the App Store</p>
-            <a href="#">
-            <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/app-store.png" alt="">
-            </a> 
-            <p class="tiny max-vp-img">© 2021 Spleet Cash Ltd. All rights reserved</p>           
-          </div>
-          <div class="socials">
-            <p class="title">Follow Spleet Cash</p>
-
-            <div class="follow-us">
-              <a href="#">
-                <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/twitter.png" alt="">
-              </a>
-              <a href="#">
-                <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/instagram.png" alt="">
-              </a>
-            </div>
-
-            <div class="links max-vp-img">
-              <a href="#" class="tiny">Terms</a>
-              <a href="#" class="tiny">Privacy</a>
-            </div>
-
-
-            <p class="mid-text mini-vp-img">hello@spleet.cash</p>
-
-            <a href="#" class="footer-logo mini-vp-img">
-              <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/footer-logo.png" alt="">
-            </a>
-
-            <div class="links mini-vp-img">
-              <a href="#" class="tiny">Terms</a>
-              <a href="#" class="tiny">Privacy Policy</a>
-            </div>
-
-            <p class="mini-vp-img tiny">© 2021 Spleet Cash Ltd. All rights reserved</p>           
-
-          
-
-          </div>
-        </footer>
+        <teleport to="body">
+          <transition
+            enter-active-class="transition ease-out duration-200 transform"
+            enter-from-class="opacity-0"
+            enter-to-class="opacity-100"
+            leave-active-class="transition ease-in duration-200 transform"
+            leave-from-class="opacity-100"
+            leave-to-class="opacity-0">
+              <div
+              v-show="modalOpen"
+              ref="modal-backdrop"
+              class="app-modal fixed z-10 inset-0 overflow-y-auto bg-black bg-opacity-50"
+              >
+                  <div
+                      class="flex items-start justify-center min-h-screen pt-24 text-center"
+                  >
+                   <transition
+                    enter-active-class="transition ease-out duration-300 transform "
+                    enter-from-class="opacity-0 translate-y-10 scale-95"
+                    enter-to-class="opacity-100 translate-y-0 scale-100"
+                    leave-active-class="ease-in duration-200"
+                    leave-from-class="opacity-100 translate-y-0 scale-100"
+                    leave-to-class="opacity-0 translate-y-10 translate-y-0 scale-95"
+                   >
+                      <div
+                      class="modal-wrapper rounded-lg text-left overflow-hidden shadow-xl p-0 w-1/2"
+                      role="dialog"
+                      ref="modal"
+                      aria-modal="true"
+                      v-show="modalOpen"
+                      aria-labelledby="modal-headline"
+                      >
+                      
+                      <div class="modal-content">
+                          <h4 class="modal-title">Successfully Reserved!</h4>
+                          <p class="modal-text">Hey, check your mail! We just sent you your reservation details. Share on Twitter for your friends to reserve theirs!</p>
+                          <div class="modal-action tweet-container">
+                              <a class="twitter-share-button"
+                                href="https://twitter.com/share"
+                                data-text="I just reserved my username on @spleet_cash. Reserve yours now!"
+                                data-url="https://spleet.cash"
+                                data-hashtags="SpleetCash,SplitPayments"
+                                data-via="spleet_cash">
+                                Share
+                              </a>
+                          </div>
+                          <a class="modal-close" @click="closeModal">
+                              <img src="https://assets-hub.s3.us-west-2.amazonaws.com/img/spleet.cash/modal-close.png" />
+                          </a>
+                      </div>
+                          
+                      </div>
+                   </transition>
+                   
+                  </div>
+              </div>
+          </transition>  
+        </teleport>
+        <app-footer></app-footer>
       </div>
     </div>
     
 
     <script>
 
-      var windowWidth = window.innerWidth;
-      var horizontalLength = document.querySelector(".element-wrapper").scrollWidth;
-      var distFromTop = document.querySelector(".horizontal-section").offsetTop;
+      // var windowWidth = window.innerWidth;
+      // var horizontalLength = document.querySelector(".element-wrapper").scrollWidth;
+      // var distFromTop = document.querySelector(".horizontal-section").offsetTop;
 
-      document.querySelector(".horizontal-section").style.height = horizontalLength + "px";
-      var scrollDistance = distFromTop + horizontalLength - windowWidth 
-      console.log(scrollDistance);
+      // document.querySelector(".horizontal-section").style.height = horizontalLength + "px";
+      // var scrollDistance = distFromTop + horizontalLength - windowWidth 
+      // console.log(scrollDistance);
 
-      window.onscroll = function(){
-        var scrollTop = window.pageYOffset
-        if (scrollTop >= distFromTop && scrollTop <= scrollDistance){
-          document.querySelector(".element-wrapper").style.transform = "translateX(-" +(scrollTop - distFromTop) +"px"
-        }
-      }
+      // window.onscroll = function(){
+      //   var scrollTop = window.pageYOffset
+      //   if (scrollTop >= distFromTop && scrollTop <= scrollDistance){
+      //     document.querySelector(".element-wrapper").style.transform = "translateX(-" +(scrollTop - distFromTop) +"px"
+      //   }
+      // }
     </script>
+
 
     <!-- Import App -->
     <script src="./main.js"></script>
 
     <!-- Import Components -->
-    <script src="./components/ReservationForm.js"></script>
+    <script src="./components/appComponents/AppHeader.js"></script>
+    <script src="./components/forms/ReservationForm.js"></script>
+    <script src="./components/appComponents/AppFooter.js"></script>
+
 
 
 
     <!-- Mount App -->
     <script>
+    
       const mountedApp = app.mount('#app')
     </script>
   </body>

@@ -1,8 +1,9 @@
 app.component('reservation-form', {
   template:
   /*html*/
-  `<form @submit.prevent="fakeSubmit">
+  `<form @submit.prevent="onSubmit">
     <p class="app-form-error" v-if="formError.length > 0">{{formError}}</p>
+    <p class="app-form-success" v-if="formSuccess.length > 0">{{formSuccess}}</p>
     <div class="form-group">
       <label for="username">Username</label> 
       <input v-model="username" type="text" id="username" placeholder="e.g spleetcash (min. 3 characters)"/>
@@ -19,13 +20,17 @@ app.component('reservation-form', {
       <span v-else class="btn-titile">Reserve</span>
     </button>    
 
-  </form>`,
+  </form>
+
+  `,
   data() {
     return {
       username: '',
       email: '',
       formError: '',
-      callingApi: true
+      formSuccess: '',
+      callingApi: false,
+      ApiResponse: {},
     }
   },
   methods: {
@@ -43,10 +48,7 @@ app.component('reservation-form', {
         username: this.username,
         email: this.email
       }
-      this.$emit('review-submitted', productReview)
-
-      this.username = ''
-      this.email = ''
+      console.log(`usernameReservation => ${JSON.stringify(usernameReservation)}`)
 
       const requestOptions = {
         method: 'POST',
@@ -66,38 +68,23 @@ app.component('reservation-form', {
             this.formError = error
             return Promise.reject(error);
           }
+          this.ApiResponse = data;
+          console.log(`ApiResponse => ${JSON.stringify(this.ApiResponse)}`)
+          if(data.responseCode === '00'){
+            this.username = ''
+            this.email = ''
 
-          this.postId = data.id;
+            this.formSuccess = data.responseMessage
+          
+            this.emit('open-success-modal')
+          } else {
+            this.formError = data.responseMessage
+          }
         })
         .catch(error => {
           this.formError = error;
           console.error('There was an error!', error);
         });
     },
-    reserveUsername() {
-          // POST request using fetch with error handling
-      const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title: 'Vue POST Request Example' })
-      };
-      fetch('https://jsonplaceholder.typicode.com/invalid-url', requestOptions)
-        .then(async response => {
-          const data = await response.json();
-
-          // check for error response
-          if (!response.ok) {
-            // get error message from body or default to response status
-            const error = (data && data.message) || response.status;
-            return Promise.reject(error);
-          }
-
-          this.postId = data.id;
-        })
-        .catch(error => {
-          this.errorMessage = error;
-          console.error('There was an error!', error);
-        });
-    }
   }
 })
